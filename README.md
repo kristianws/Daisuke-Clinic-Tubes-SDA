@@ -12,21 +12,66 @@ Anggota Kelompok:
 * Nabil Rizki Wardana (L0124066)
 * Saskya Aliya Azizah (L0124076)
 * Jesayas Hutasoit (L0124101)
-
-Kontribusi Anggota:
-* Nabil : Struktur data, revisi program
-* Saskya : struktur data, developing program, rivisi program 
-* Kristian : rivisi program, uji fitur program 
-* Jesayas : uji fitur program, pembuatan read me
-* Rafi : uji fitur program, pembuatan video demonstras
 ------
 
 ## Struktur Direktori Program
-- `Main.java`
-    - `Doctor.java`
-    - `Admin.java`
-    - `Patient.java`      
-------
+```
+- Main.java
+        - admin
+                -Admin.java
+                -AdminList.java
+                -AdminRecord.java
+        - apointment
+                -Appointment.java
+                -AppointmentManagement.java
+                -Queue.java
+        - data
+                -admin.txt
+                -Appointment_(Speciality).txt
+                -doctor.txt
+                -loginadmin.txt
+                -logindoctor.txt
+                -logoutadmin.txt
+                -MedicalRecordadmin.txt
+                -roomNumber.txt
+                -schedule.txt
+                -patient.json
+        - display
+                -end.txt
+                -loginregister.txt
+                -menuAdmin.txt
+                -menuDoctor.txt
+                -menuPatient.txt
+                -title.txt
+                -user.txt
+        - doctor
+                -Doctor.java
+                -DoctorLinkeList.java
+                -DoctorManagement.java
+                -Stack.java
+        - lib
+                -gsom-1.10.1.jar
+        - medicalrecord
+                -MedicalRecord.java
+                -MedicalRecordLisy.java
+                -MedicalRecordManagement.java
+        - patient
+                -BST.java
+                -LinkedList.java
+                -Patient.java
+                -PatientManagement.java
+        - schedule
+                -Schedule.java
+                -ScheduleList.java
+                -ScheduleManagement.java
+        - utility
+                -ConsoleUtil.java
+                -Constants.java
+                -FileHandler.java
+- tubes.code-workspace
+  ```
+   
+![image](https://github.com/user-attachments/assets/6eafbf42-5390-475d-98b6-e3b36b1726de)
 
 ## Cara Penggunaan Program
 
@@ -75,9 +120,19 @@ Tetapi jika anda ingin login sebagai pasien anda hanya harus mengisi id dan nama
 
 **2.1. Login sebagai dokter**
 
-Setelah berhasil login sebagai dokter, program akan memastikan anda sudah login:
+Setelah berhasil login sebagai dokter, program akan memastikan anda sudah loggin:
 
 ![image](https://github.com/user-attachments/assets/b5c70da2-af2c-4e54-b440-cb6260e7b8a1)
+
+* *lalu ketika program dijalankan, jika ada dokter yang belum logout dihari sebelumnya maka akan dilogout oleh program*
+
+Login pada tanggal 17-06-2025.
+
+![image](https://github.com/user-attachments/assets/1f193cf6-38c0-4894-97e8-defbc90fb39c)
+
+Setelah memulai program pada tanggal 18-06-2025.
+
+![image](https://github.com/user-attachments/assets/280c8029-1740-41e0-bb8f-6e197b730fd1)
 
 Setelah menekan tombol enter, anda akan diperlihatkan menu-menu berikut:
 
@@ -177,6 +232,16 @@ Setelah menekan tombol enter, anda akan diperlihatkan menu-menu berikut:
       
       ![image](https://github.com/user-attachments/assets/5d5e21f0-2017-45f9-a6a8-100b383f5210)
 
+      * *Jika membuat janji temu Speciality tidak ada di program, maka program akan membuat file txt appointment spesialis baru yang sesuai sesuai*
+
+      Sebelum membuat Speciality baru.
+      
+      ![image](https://github.com/user-attachments/assets/d462fa96-eed8-4c77-b431-8cbc5d0e1342)
+
+      Sesudah membuat Speciality baru.
+
+      ![image](https://github.com/user-attachments/assets/4a10f058-8f01-4046-978f-f7e7b263075f)
+
       Jika tidak ada dokter yang bisa melakukan janji temu program akan membuat peringatan.
 
       ![image](https://github.com/user-attachments/assets/97e7c563-4912-4b12-9566-6f51b23eea6e)
@@ -262,7 +327,7 @@ Setelah menekan tombol enter, anda akan diperlihatkan menu-menu berikut:
 
 **2.2 Login Sebagai Pasien**
 
-Setelah berhasil login sebagai Pasien, program akan memastikan anda sudah login:
+Setelah berhasil login sebagai Pasien, program akan memastikan anda sudah loggin:
 
 ![image](https://github.com/user-attachments/assets/92dca48f-9951-4c2f-86bb-e9f1082ef490)
 
@@ -378,7 +443,7 @@ Setelah menekan tombol enter, anda akan diperlihatkan menu-menu berikut:
 
 **2.3 Login Sebagai Admin**
 
-Setelah berhasil login sebagai Admin, program akan memastikan anda sudah login:.
+Setelah berhasil login sebagai Admin, program akan memastikan anda sudah loggin:.
 
 ![image](https://github.com/user-attachments/assets/08aeff7f-2b3d-46a6-9fa5-a8dd05a9e5a4)
 
@@ -686,12 +751,24 @@ Setelah menekan memilih opsi ini, anda akan diperlihatkan menu-menu berikut:
       
 * **[5] Log out**:
 
-![image](https://github.com/user-attachments/assets/845420fd-7527-4523-ae53-2369fed5201e)
+  Menyelesaikan program.
+  
+  ![image](https://github.com/user-attachments/assets/59f74bac-d166-4a92-9ac9-c61b164a0baa)
+
+**5. Exit**;
 
   Menyelesaikan program.
   
-**5. Exit**;
+  ![image](https://github.com/user-attachments/assets/23175f8f-c399-4a3e-be02-eba9f1691169)
 
-![image](https://github.com/user-attachments/assets/0e9975d3-e920-4450-a349-f30199c75990)
+* *Kontribusi*
+  
+Nabil : Struktur data, revisi program
 
-  Menyelesaikan program.
+Saskya : struktur data, developing program, rivisi program 
+
+Kristian : rivisi program, uji fitur program 
+
+Jesayas : uji fitur program, pembuatan read me
+
+Rafi : uji fitur program, pembuatan video demonstrasi
