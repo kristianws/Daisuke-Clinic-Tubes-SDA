@@ -1,0 +1,11 @@
+............................................
+============ DAISUKE CLINIC MENU ============
+`````````````````````````````````````````````
+||       1. Patient Management             ||
+||       2. Doctor Management              ||
+||       3. Appointment Management         ||
+||       4. Medical Record Management      ||
+||       5. Practice Schedule              ||
+||       6. Admin Logout                   ||
+'...........................................'
+ ==========================================="

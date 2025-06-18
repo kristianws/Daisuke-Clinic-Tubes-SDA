@@ -1,0 +1,21 @@
+D1|Dr. Bae Suzy|Psychiatrist|passSuzy123|02-06-2025 08:00:00|registered
+D2|Dr. Raymond Chris|Cardiologist|rmond123|19-02-2025 09:10:00|registered
+D3|Dr. Lita Amalia|Ophthalmologist|lita4malia|19-02-2025 09:10:00|registered
+D4|Dr. Nicholas Saputra|Neurologist|manggoN123|04-06-2025 07:30:00|registered
+D5|Dr. Ghifari Pratama|Orthopedic|ghifOrtho@321|04-06-2025 10:15:00|registered
+D6|Dr. Rafi Ramadhan|Pulmonologist|rafiLung789|05-06-2025 09:20:00|registered
+D7|Dr. Aulia Fitriani|Pediatrician|kidsAulia@001|29-04-2025 10:05:00|registered
+D8|Dr. Sarah Putri|Obstetrician|sarahOB777|15-05-2025 07:10:00|registered
+D9|Dr. Rina Andini|Dermatologist|rinaSkin66|06-04-2025 11:30:00|registered
+D10|Dr. Rizky Firmansyah|Rheumatologist|rizkyGP999|06-06-2025 12:00:00|registered
+D11|Dr. Cindy Lestari|Allergist|cindyAllergy88|17-05-2025 15:00:00|registered
+D12|Dr. Fajar Hakim|Nephrologist|fajarKidney07|09-06-2025 16:15:00|registered
+D13|Dr. Dimas Nugroho|Endocrinologist|dimasEndo!|13-03-2025 17:30:00|registered
+D14|Dr. Dewi Kartikasari|Hematologist|dewiBlood789|25-04-2025 08:55:00|registered
+D15|Dr. Kevin Aditya|Urologist|kevinUro123|10-10-2024 09:40:00|registered
+D16|Dr. Saskya|Cardiologist|passSaskya123|16-06-2025 23:27:59|registered
+<<<<<<< HEAD
+D17|akbar|cardiologist|akbar123|18-06-2025 00:00:16|registered
+D18|sayas|neurologist|sayas123|18-06-2025 03:47:09|registered
+=======
+>>>>>>> ad4db4028402c9539efbe24912e83d678c3af727

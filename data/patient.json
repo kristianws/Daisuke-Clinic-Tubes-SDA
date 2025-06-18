@@ -1,0 +1,239 @@
+[
+  {
+    "id": "P1",
+    "name": "Saskya",
+    "age": 17,
+    "address": "Bandung",
+    "phoneNumber": "083144529021",
+<<<<<<< HEAD
+    "medicalrecord": {
+      "head": {
+        "data": {
+          "diagnosis": "entah",
+          "medication": "entah",
+          "treatment": "mbuh",
+          "roomNumber": "",
+          "complaint": "Sakit aja"
+        },
+        "next": {
+          "data": {
+            "diagnosis": "penyakit jatung",
+            "medication": "olah raga teratur dan meminum suplemen",
+            "treatment": "terapi dipagi hari",
+            "roomNumber": "2",
+            "complaint": "gtw"
+          },
+          "next": {
+            "data": {
+              "diagnosis": "serangan jantung",
+              "medication": "olahraga teratur ",
+              "treatment": "tearpi",
+              "roomNumber": "A101",
+              "complaint": "sakit jantung"
+            }
+          }
+        }
+      }
+    }
+=======
+    "medicalrecord": {}
+>>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
+  },
+  {
+    "id": "P2",
+    "name": "Adit",
+    "age": 16,
+    "address": "Solo",
+    "phoneNumber": "089887641290",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P3",
+    "name": "Denis",
+    "age": 21,
+    "address": "Solo",
+    "phoneNumber": "081917465463",
+    "medicalrecord": {
+      "head": {
+        "data": {
+          "diagnosis": "gtw",
+          "medication": "gtw",
+          "treatment": "gtw",
+          "roomNumber": "A101",
+          "complaint": "mbuh"
+        },
+        "next": {
+          "data": {
+            "diagnosis": "w",
+            "medication": "w",
+            "treatment": "w",
+            "roomNumber": "w",
+            "complaint": "complaint2"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": "P4",
+    "name": "Kristian",
+    "age": 20,
+    "address": "Madura",
+    "phoneNumber": "085812318892",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P5",
+    "name": "Nabil",
+    "age": 14,
+    "address": "Bekasi",
+    "phoneNumber": "085177469003",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P6",
+    "name": "Rafi",
+    "age": 22,
+    "address": "Tangerang",
+    "phoneNumber": "089978234228",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P7",
+    "name": "Jesayas",
+    "age": 19,
+    "address": "Jakarta",
+    "phoneNumber": "081234567890",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P8",
+    "name": "Bagas",
+    "age": 31,
+    "address": "Surabaya",
+    "phoneNumber": "082198765432",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P9",
+    "name": "Citra",
+    "age": 28,
+    "address": "Yogyakarta",
+    "phoneNumber": "085212345678",
+    "medicalrecord": {
+      "head": {
+        "data": {
+          "diagnosis": "mbuh",
+          "medication": "mbuh",
+          "treatment": "mbuh",
+          "roomNumber": "A102",
+          "complaint": "gatau"
+        }
+      }
+    }
+  },
+  {
+    "id": "P10",
+    "name": "Danu",
+    "age": 35,
+    "address": "Medan",
+    "phoneNumber": "087812341234",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P11",
+    "name": "Elisa",
+    "age": 24,
+    "address": "Malang",
+    "phoneNumber": "089991122334",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P12",
+    "name": "Fahri",
+    "age": 27,
+    "address": "Depok",
+    "phoneNumber": "081223344556",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P13",
+    "name": "Gita",
+    "age": 21,
+    "address": "Semarang",
+    "phoneNumber": "082345667788",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P14",
+    "name": "Hendra",
+    "age": 29,
+    "address": "Padang",
+    "phoneNumber": "085267890123",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P15",
+    "name": "Indah",
+    "age": 25,
+    "address": "Palembang",
+    "phoneNumber": "087823456789",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P16",
+    "name": "Joko",
+    "age": 34,
+    "address": "Bandar Lampung",
+    "phoneNumber": "089812345679",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P17",
+    "name": "Kirana",
+    "age": 22,
+    "address": "Balikpapan",
+    "phoneNumber": "082198734561",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P18",
+    "name": "Leo",
+    "age": 30,
+    "address": "Manado",
+    "phoneNumber": "081298765432",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P19",
+    "name": "Maya",
+    "age": 18,
+    "address": "Pontianak",
+    "phoneNumber": "087898765432",
+    "medicalrecord": {}
+  },
+  {
+    "id": "P21",
+    "name": "Olivia",
+    "age": 23,
+    "address": "Makassar",
+    "phoneNumber": "085219876543",
+    "medicalrecord": {}
+  },
+  {
+    "id": "22",
+    "name": "Brian",
+    "age": 23,
+    "address": "Jakarta",
+    "phoneNumber": "081917468544",
+    "medicalrecord": {}
+  },
+  {
+    "id": "23",
+    "name": "Nico",
+    "age": 19,
+    "address": "Banten",
+    "phoneNumber": "081912267832",
+    "medicalrecord": {}
+  }
+]
