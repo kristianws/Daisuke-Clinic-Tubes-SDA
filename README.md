@@ -14,6 +14,31 @@ Anggota Kelompok:
 * Jesayas Hutasoit (L0124101)
 ------
 
+## Cara Menjalankan Program
+1. Clone repository ini.
+```
+git clone https://github.com/kristianws/Daisuke-Clinic-Tubes-SDA/
+```
+2. Buka Terminal dan arahkan ke folder Daisuke-Clinic-Tubes-SDA
+3. Compile Seluruh file java di folder dengan cara berikut
+```
+javac -cp ".;lib\gson-2.10.1.jar" Main.java schedule/*.java patient/*.java medicalrecord/*.java doctor/*.java appointment/*.java admin/*.java utility/*.java
+```
+Jika Menggunakan Mac/Linux
+```
+javac -cp ".:lib/gson-2.10.1.jar" Main.java schedule/*.java patient/*.java medicalrecord/*.java doctor/*.java appointment/*.java admin/*.java utility/*.java
+```
+
+4. Kemudian Jalankan perintah berikut untuk menggunakan Program
+```
+java -cp ".;lib\gson-2.10.1.jar" Main
+```
+Jika menggunakan Mac/Linux
+```
+java -cp ".:lib\gson-2.10.1.jar" Main
+```
+
+
 ## Struktur Direktori Program
 ```
 - Main.java
