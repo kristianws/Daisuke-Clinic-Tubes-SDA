@@ -124,13 +124,10 @@ public class Queue {
         return true;
     }
 
-<<<<<<< HEAD
     public Appointment getTopAppointment() {
         return front != null ? front.appointment : null;
     }
 
-=======
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
     public void displayQueue(String filename) {
         DateTimeFormatter formatTime = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         load(filename);

@@ -1,12 +1,5 @@
 ADM1|Admin-1|passAdmin1|17-06-2025 00:47
-<<<<<<< HEAD
 ADM1|Admin-1|passAdmin1|17-06-2025 23:22
 ADM7|sayas|passAdmin7|17-06-2025 23:38
 ADM7|sayas|passAdmin7|17-06-2025 23:55
 ADM7|sayas|passAdmin7|18-06-2025 03:30
-=======
-ADM1|Admin-1|passAdmin1|17-06-2025 07:56
-ADM1|Admin-1|passAdmin1|17-06-2025 07:58
-ADM1|Admin-1|passAdmin1|17-06-2025 08:01
-ADM1|Admin-1|passAdmin1|17-06-2025 08:08
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727

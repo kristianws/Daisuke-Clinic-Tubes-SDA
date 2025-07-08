@@ -145,11 +145,7 @@ public class PatientManagement {
         }while(choice != 0);
     }
 
-<<<<<<< HEAD
     public static void registerPatient(Scanner sc,LinkedList patientList, String username,String password) {
-=======
-      public static void registerPatient(Scanner sc,LinkedList patientList, String username,String password) {
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         ConsoleUtil.clearScreen();
         System.out.println("======= PATIENT REGISTER =======");
 

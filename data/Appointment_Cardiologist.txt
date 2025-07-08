@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 A18062025-002|P3|D2|Cardiologist|sakit jantung|20-06-2025 18:00
-=======
-A16062025-001|P1|D2|Cardiologist|gtw|17-06-2025 11:00
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727

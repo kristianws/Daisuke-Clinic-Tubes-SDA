@@ -245,7 +245,6 @@ public class AppointmentManagement {
 
         FileHandler.createFile("data/Appointment_"+speciality+".txt");
         appointmentQueue.load("data/Appointment_"+speciality+".txt");
-<<<<<<< HEAD
         Appointment top = appointmentQueue.getTopAppointment();
 
         if (top != null) {
@@ -274,39 +273,14 @@ public class AppointmentManagement {
         System.out.println(Constants.GREEN+"\nDetail Processed appointment\n"+Constants.RESET);
         Appointment processed = appointmentQueue.dequeue(filename);
 
-=======
-        Appointment processed = appointmentQueue.dequeue(filename);
-
-        if (processed == null) {
-            System.out.println(Constants.RED+"No appointments to process"+Constants.RESET);
-            return;
-        }
-        ConsoleUtil.clearScreen();
-        System.out.println(Constants.GREEN+"\nDetail Processed appointment\n"+Constants.RESET);
-        System.out.println(processed.toString(patientList, doctorStack));
-        ConsoleUtil.waitForEnter(sc);
-
-        ConsoleUtil.clearScreen();
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         System.out.println("Appointment ID   : "+processed.getAppointmentId());
         System.out.println("Patient ID       : "+processed.getPatientId());
         String patientId = processed.getPatientId();
         System.out.println("Doctor ID        : "+processed.getDoctorId());
-<<<<<<< HEAD
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
         System.out.println("Date             : " + processed.getDateTime().format(formatter));  
         System.out.println("Complaint        : "+processed.getComplaint());
         String complaint = processed.getComplaint();
-=======
-        System.out.println("Date             : "+processed.getDateTime());
-        System.out.println("Complaint        : "+processed.getComplaint());
-        String complaint = processed.getComplaint();
-        if(!processed.getDoctorId().equals(loginDoc)){
-            System.out.println(Constants.RED+"You can not process this appointment\n"+Constants.RESET);
-            ConsoleUtil.waitForEnter(sc);
-            return;
-        }
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         System.out.print("Diagnosis        : ");
         diagnosis = sc.nextLine();
         System.out.print("Medication       : ");
@@ -317,21 +291,11 @@ public class AppointmentManagement {
         roomNumber = sc.nextLine();
         updateCapacityRoom("data/roomNumber.txt", roomNumber);
 
-<<<<<<< HEAD
         Patient p = patientList.getPatientById(processed.getPatientId()); 
 
         if (p != null) { 
             p.addMedicalRecord( new MedicalRecord(complaint,diagnosis, medication, treatment, roomNumber)); 
 
-=======
-        Patient p = patientList.getPatientById(processed.getPatientId()); // Dapatkan pasien yang ada berdasarkan ID
-
-        if (p != null) { // Pastikan pasien ditemukan
-            p.addMedicalRecord( new MedicalRecord(complaint,diagnosis, medication, treatment, roomNumber)); // Tambahkan medical record ke pasien yang *ada*
-
-            //patientList.save("data/patient.json"); // Simpan perubahan ke file
-            //System.out.println(Constants.GREEN + "Data berhasil disimpan!" + Constants.RESET);
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         } else {
             System.out.println(Constants.RED + "Pasien dengan ID " + processed.getPatientId() + " tidak ditemukan." + Constants.RESET);
         }
@@ -353,16 +317,10 @@ public class AppointmentManagement {
         } catch (IOException e) {
             System.out.println(Constants.RED+"Error to TXT : " + e.getMessage()+Constants.RESET);
         }
-<<<<<<< HEAD
-=======
-        // MedicalRecord records = new MedicalRecord(diagnosis,medication,treatment, roomNumber);
-        //ConsoleUtil.waitForEnter(sc);
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         ConsoleUtil.clearScreen();
         DisplayMedicalRecord(sc,patientId,processed,patientList,doctorStack);
     }
 
-<<<<<<< HEAD
     public static boolean isDoctorLoggedIn(String doctorId) {
         try (BufferedReader reader = new BufferedReader(new FileReader("data/logindoctor.txt"))) {
             String line;
@@ -378,8 +336,6 @@ public class AppointmentManagement {
         return false;
     }
 
-=======
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
     public static void DisplayMedicalRecord(Scanner sc,  String patientId, Appointment appointment, LinkedList patientList, Stack doctorStack) {
         File inputFile = new File("data/MedicalRecord.txt");
         Doctor doctor = doctorStack.getDoctorById(appointment.getDoctorId());

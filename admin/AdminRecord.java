@@ -67,11 +67,7 @@ public class AdminRecord {
             String id = current.data.getId();
             if (id.startsWith("ADM")) {
                 try {
-<<<<<<< HEAD
                     int num = Integer.parseInt(id.substring(3));
-=======
-                    int num = Integer.parseInt(id.substring(3)); // GANTI INI, bukan substring(1)
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                     maxId = Math.max(maxId, num);
                 } catch (NumberFormatException e) {
                     // Bisa log error kalau perlu

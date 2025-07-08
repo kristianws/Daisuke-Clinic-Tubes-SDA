@@ -35,10 +35,6 @@ public class Main {
 
         loadData(patientList, admin, doctorStack, appointmentQueue, patientBST, schedule);
 
-<<<<<<< HEAD
-=======
-        // do{
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         ConsoleUtil.clearScreen();
         System.out.print(Constants.BLUE);
         FileHandler.readFile("display/title.txt");
@@ -46,10 +42,6 @@ public class Main {
         while (!isLoggedIn) {
             roleUser(scanner, admin, adminRole, patientManage, doctorStack, doctorManage);
         }
-<<<<<<< HEAD
-=======
-        // roleUser(scanner,admin,adminRole,patientManage,doctorStack,doctorManage);
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
 
         if (user == 1) {
             boolean isRunning = true;
@@ -93,16 +85,7 @@ public class Main {
             ConsoleUtil.clearScreen();
             if (user == 2) {
                 do {
-<<<<<<< HEAD
                     ConsoleUtil.clearScreen();
-=======
-                    // if (!isLoggedIn){
-                    // System.out.println("You havent logged in");
-                    // return;
-                    // } else {
-                    ConsoleUtil.clearScreen();
-                    ;
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                     System.out.println(Constants.BLUE);
                     FileHandler.readFile("display/menuDoctor.txt");
                     System.out.print(Constants.RESET);
@@ -132,33 +115,11 @@ public class Main {
                             scheduleManage.menu(scanner);
                             break;
                         }
-<<<<<<< HEAD
                         default -> System.out.println(Constants.RED + "Invalid option. Try again" + Constants.RESET);
                     }
                 } while (true);
             } else {
                 do {
-=======
-                        // case 0 -> {
-                        // //doctorManage.doctorLogout(doctorStack); otomatis logout sendiri kalo keluar
-                        // program
-                        // ConsoleUtil.clearScreen();
-                        // System.out.println(Constants.PURPLE);
-                        // FileHandler.readFile("display/end.txt");
-                        // System.out.println(Constants.RESET);
-                        // System.exit(0);
-                        // }
-                        default -> System.out.println(Constants.RED + "Invalid option. Try again" + Constants.RESET);
-                    }
-                    // }
-                } while (true);
-            } else {
-                do {
-                    // if (!isLoggedIn){
-                    // System.out.println("You havent logged in");
-                    // return;
-                    // } else {
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                     ConsoleUtil.clearScreen();
                     System.out.println(Constants.BLUE);
                     FileHandler.readFile("display/menuAdmin.txt");
@@ -198,28 +159,16 @@ public class Main {
                         }
                         default -> System.out.println(Constants.RED + "Invalid option. Try again" + Constants.RESET);
                     }
-<<<<<<< HEAD
-=======
-                    // }
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                 } while (true);
             }
         } else {
             System.out.println("INVALID INPUT");
             return;
         }
-<<<<<<< HEAD
     }
 
     static void loadData(LinkedList patientList, AdminList adm, Stack doctorStack, Queue appointmentQueue,
         BST patientBST, ScheduleList schedule) {
-=======
-        // }while(!isLoggedIn);
-    }
-
-    static void loadData(LinkedList patientList, AdminList adm, Stack doctorStack, Queue appointmentQueue,
-            BST patientBST, ScheduleList schedule) {
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         patientList.load("data/patient.json");
         doctorStack.load("data/doctor.txt");
         // adm.load("data/admin.txt");
@@ -233,13 +182,8 @@ public class Main {
     }
 
     static void roleUser(Scanner sc, AdminList adm, AdminRecord adminRole,
-<<<<<<< HEAD
         PatientManagement patientManage, Stack doctorRole,
         DoctorManagement doctorManage) {
-=======
-            PatientManagement patientManage, Stack doctorRole,
-            DoctorManagement doctorManage) {
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         int opsi;
         System.out.println(Constants.BLUE);
         FileHandler.readFile("display/loginregister.txt");
@@ -279,7 +223,6 @@ public class Main {
                     isLoggedIn = true;
                     user = 3;
                     adminRole.adminLogin(sc, inputId, inputName, inputPassword);
-<<<<<<< HEAD
                     ConsoleUtil.waitForEnter(sc);
                     ConsoleUtil.clearScreen();
                     break;
@@ -307,27 +250,6 @@ public class Main {
                     isLoggedIn = true;
                     user = 2;
                     break;
-=======
-                    break;
-
-                case "D":
-                    System.out.print("Enter Username : ");
-                    inputName = sc.nextLine();
-                    System.out.print("Enter Password : ");
-                    inputPassword = sc.nextLine();
-
-                    if (inputName.trim().isEmpty() || inputPassword.trim().isEmpty()) {
-                        System.out.println(
-                                Constants.RED + "Error: Username or Password cannot be empty" + Constants.RESET);
-                        return;
-                    }
-
-                    isLoggedIn = true;
-                    user = 2;
-                    doctorManage.doctorLogin(sc, doctorRole, inputId, inputName, inputPassword);
-                    break;
-
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                 case "P":
                     System.out.print("Enter Username : ");
                     inputName = sc.nextLine();
@@ -340,29 +262,16 @@ public class Main {
                     isLoggedIn = true;
                     user = 1;
                     patientManage.patientLogin(sc, inputId, inputName);
-<<<<<<< HEAD
                     ConsoleUtil.waitForEnter(sc);
                     ConsoleUtil.clearScreen();
-=======
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
                     break;
                 default:
                     System.out.println(Constants.RED + "User role not recognized. ID should start with ADM, D, or P."
                             + Constants.RESET);
-<<<<<<< HEAD
                     ConsoleUtil.waitForEnter(sc);
                     ConsoleUtil.clearScreen();
             }
-=======
-            }
 
-            ConsoleUtil.waitForEnter(sc);
-            ConsoleUtil.clearScreen();
-
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
-        } else if (opsi == 2) {
-            System.out.print(Constants.CYAN);
-            FileHandler.readFile("display/user.txt");
             System.out.print(Constants.RESET + "Choose option user : ");
             int opsi2 = sc.nextInt();
             sc.nextLine();

@@ -133,24 +133,6 @@ public class LinkedList {
         System.out.println("=============================================================================");
     }
 
-<<<<<<< HEAD
-=======
-    // public void save(String filename) {
-    //     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-    //         writer.write("[\n");
-    //         Node current = head;
-    //         while (current != null) {
-    //             writer.write(current.patient.toJson());
-    //             if (current.next != null) writer.write(",\n");
-    //             current = current.next;
-    //         }
-    //         writer.write("\n]");
-    //     } catch (IOException e) {
-    //         System.out.println("Error saving to JSON: " + e.getMessage());
-    //     }
-    // }
-
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
     public String toJson() {
         Gson gson = new GsonBuilder()
             .setPrettyPrinting()
@@ -159,21 +141,12 @@ public class LinkedList {
     }
 
     public Patient[] toArray() {
-<<<<<<< HEAD
-=======
-        // Hitung jumlah elemen
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         int size = 0;
         Node curr = head;
         while (curr != null) {
             size++;
             curr = curr.next;
         }
-<<<<<<< HEAD
-=======
-
-        // Pindahkan isi ke array
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
         Patient[] array = new Patient[size];
         curr = head;
         int index = 0;
@@ -235,8 +208,4 @@ public class LinkedList {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727

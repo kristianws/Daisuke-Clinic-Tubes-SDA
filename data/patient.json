@@ -5,7 +5,6 @@
     "age": 17,
     "address": "Bandung",
     "phoneNumber": "083144529021",
-<<<<<<< HEAD
     "medicalrecord": {
       "head": {
         "data": {
@@ -35,9 +34,6 @@
         }
       }
     }
-=======
-    "medicalrecord": {}
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
   },
   {
     "id": "P2",

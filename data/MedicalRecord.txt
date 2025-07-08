@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 A16062025-002|P3|D2|Cardiologist|complaint2|w|w|w|w|17-06-2025 09:00
 A17062025-002|P9|D9|Dermatologist|gatau|mbuh|mbuh|mbuh|A102|11-11-2025 10:00
 A16062025-001|P1|D2|cardiologist|gtw|penyakit jatung|olah raga teratur dan meminum suplemen|terapi dipagi hari|2|17-06-2025 11:00
 A18062025-001|P1|D2|Cardiologist|sakit jantung|serangan jantung|olahraga teratur |tearpi|A101|19-06-2025 14:00
-=======
-A16062025-002|P4|D2|Cardiologist|gtw|migrain|sanmol|rawat inap|A101|17-06-2025 09:00
-A16062025-001|P1|D2|Cardiologist|gatau|gt1|gt1|gt1|100|17-06-2025 10:00
-A16062025-002|P3|D2|Cardiologist|mbuh|gtw|gtw|gtw|A101|17-06-2025 09:00
-A16062025-002|P3|D2|Cardiologist|complaint2|w|w|w|w|17-06-2025 09:00
-A17062025-002|P9|D9|Dermatologist|gatau|mbuh|mbuh|mbuh|A102|11-11-2025 10:00
->>>>>>> ad4db4028402c9539efbe24912e83d678c3af727
