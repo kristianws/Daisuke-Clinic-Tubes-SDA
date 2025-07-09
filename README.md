@@ -35,7 +35,7 @@ java -cp ".;lib\gson-2.10.1.jar" Main
 ```
 Jika menggunakan Mac/Linux
 ```
-java -cp ".:lib\gson-2.10.1.jar" Main
+java -cp ".:lib/gson-2.10.1.jar" Main
 ```
 
 
