@@ -1,1 +1,5 @@
-D1|Dr. Bae Suzy|Psychiatrist|18-06-2025 17:18:44
+D5|Dr. Ghifari Pratama|Orthopedic|17-06-2025 15:08:30
+D9|Dr. Rina Andini|Dermatologist|17-06-2025 17:53:34
+D15|Dr. Kevin Aditya|Urologist|17-06-2025 14:47:24
+D2|Dr. Raymond Chris|Cardiologist|17-06-2025 13:17:33
+D1|Dr. Bae Suzy|Psychiatrist|17-06-2025 10:16:33

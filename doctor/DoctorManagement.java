@@ -14,7 +14,7 @@ public class DoctorManagement {
     public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     public static Doctor currentLoggedInDoctor = null;
 
-    public void menu(Scanner input, Stack doctorStack, int user) {
+    public void menu(Scanner input, Stack doctorStack,int user) {
         int choice;
 
         do {
@@ -22,21 +22,21 @@ public class DoctorManagement {
             System.out.println("==============================================");
             System.out.println("------------- Doctor Management --------------");
             System.out.println("==============================================");
-            if (user == 1 || user == 3) {
+            if(user == 1 || user == 3){
                 System.out.println("| 1 | View Last Logged-in Doctor             |");
                 System.out.println("| 2 | View All Logged-in Doctor              |");
-                System.out.println("| 3 | Display All Doctors                    |");
-                System.out.println("| 4 | Search Doctor by Name                  |");
-                System.out.println("| 5 | Search Doctor by ID                    |");
+                System.out.println("| 3 | Display All Doctors                    |"); 
+                System.out.println("| 4 | Search Doctor by Name                  |");  
+                System.out.println("| 5 | Search Doctor by ID                    |");  
                 System.out.println("| 0 | Exit From Doctor Management            |");
                 System.out.println("----------------------------------------------");
-            } else if (user == 2) {
+            }else if (user == 2){
                 System.out.println("| 1 | Doctor Logout                          |");
                 System.out.println("| 2 | View Last Logged-in Doctor             |");
                 System.out.println("| 3 | View All Logged-in Doctor              |");
-                System.out.println("| 4 | Display All Doctors                    |");
-                System.out.println("| 5 | Search Doctor by Name                  |");
-                System.out.println("| 6 | Search Doctor by ID                    |");
+                System.out.println("| 4 | Display All Doctors                    |");  
+                System.out.println("| 5 | Search Doctor by Name                  |");  
+                System.out.println("| 6 | Search Doctor by ID                    |");  
                 System.out.println("| 0 | Exit From Doctor Management            |");
                 System.out.println("----------------------------------------------");
             }
@@ -44,26 +44,22 @@ public class DoctorManagement {
             choice = input.nextInt();
             input.nextLine();
 
-            if (user == 1 || user == 3) {
+            if(user == 1 || user == 3){
                 ConsoleUtil.clearScreen();
                 switch (choice) {
-                    case 0 -> {
-                        return;
-                    }
+                    case 0 -> {return;}
                     case 1 -> lastLogin(1);
                     case 2 -> lastLogin(2);
                     case 3 -> displayAllDoctors(doctorStack);
                     case 4 -> searchDoctorByName(input, doctorStack);
                     case 5 -> searchDoctorByID(input, doctorStack);
-                    default -> System.out.println(Constants.RED + "Invalid option. Try again" + Constants.RESET);
+                    default -> System.out.println(Constants.RED+"Invalid option. Try again"+Constants.RESET);
                 }
                 ConsoleUtil.waitForEnter(input);
-            } else {
+            }else{
                 ConsoleUtil.clearScreen();
                 switch (choice) {
-                    case 0 -> {
-                        return;
-                    }
+                    case 0 -> {return;}
                     case 1 -> {
                         doctorLogout(doctorStack);
                         System.out.println(Constants.PURPLE);
@@ -76,7 +72,7 @@ public class DoctorManagement {
                     case 4 -> displayAllDoctors(doctorStack);
                     case 5 -> searchDoctorByName(input, doctorStack);
                     case 6 -> searchDoctorByID(input, doctorStack);
-                    default -> System.out.println(Constants.RED + "Invalid option. Try again" + Constants.RESET);
+                    default -> System.out.println(Constants.RED+"Invalid option. Try again"+Constants.RESET);
                 }
                 ConsoleUtil.waitForEnter(input);
             }
@@ -92,28 +88,28 @@ public class DoctorManagement {
         System.out.print("Enter Doctor Name : ");
         String docName = sc.nextLine();
         if (docName == null || docName.trim().isEmpty() || !docName.matches("[a-zA-Z\\.\\s\\-']+")) {
-            System.out.println(Constants.RED + "Error : Name must contain only letters and spaces" + Constants.RESET);
+            System.out.println(Constants.RED+"Error : Name must contain only letters and spaces"+Constants.RESET);
             return;
         }
         System.out.print("Enter Speciality  : ");
         String speciality = sc.nextLine();
         if (speciality == null || speciality.trim().isEmpty()) {
-            System.out.println(Constants.RED + "Error : Speciality cannot be empty" + Constants.RESET);
+            System.out.println(Constants.RED+"Error : Speciality cannot be empty"+Constants.RESET);
             return;
         }
         System.out.print("Enter Password    : ");
         String password = sc.nextLine();
         if (password == null || password.trim().isEmpty()) {
-            System.out.println(Constants.RED + "Error : Password cannot be empty" + Constants.RESET);
+            System.out.println(Constants.RED+"Error : Password cannot be empty"+Constants.RESET);
             return;
         }
         Doctor doctor = new Doctor(docId, docName, speciality, password, LocalDateTime.now());
         doctorStack.registerDoctor(doctor);
         ConsoleUtil.clearScreen();
-        System.out.println(Constants.GREEN + "Doctor registered successfully\n" + Constants.RESET);
-        System.out.println("Doctor ID  : " + doctor.getId() + "\n" +
-                "Name       : " + doctor.getName() + "\n" +
-                "Speciality : " + doctor.getSpeciality());
+        System.out.println(Constants.GREEN+"Doctor registered successfully\n" + Constants.RESET);
+          System.out.println("Doctor ID  : "+doctor.getId()+"\n"+
+                             "Name       : "+doctor.getName()+"\n"+
+                             "Speciality : "+doctor.getSpeciality());
         ConsoleUtil.waitForEnter(sc);
         ConsoleUtil.clearScreen();
     }
@@ -125,35 +121,33 @@ public class DoctorManagement {
             String id = current.doctor.getId();
             if (id.startsWith("D")) {
                 try {
-                    int num = Integer.parseInt(id.substring(1)); // Extract number after "D"
+                    int num = Integer.parseInt(id.substring(1)); 
                     maxId = Math.max(maxId, num);
-                } catch (NumberFormatException e) {
-                }
+                } catch (NumberFormatException e) {}
             }
             current = current.next;
         }
         int newId = maxId + 1;
-        return String.format("D%d", newId);
+        return String.format("D%d", newId); 
     }
 
-    public static boolean doctorLogin(Scanner sc, Stack doctorStack, String doctorId, String docName, String password) {
+    public static boolean doctorLogin(Scanner sc, Stack doctorStack,String doctorId,String docName,String password) {
         if (doctorStack.validateDoctor(doctorId, docName, password)) {
             Doctor doctor = doctorStack.getDoctorById(doctorId);
-            Doctor updatedDoctor = new Doctor(doctor.getId(), doctor.getName(), doctor.getSpeciality(),
-                    doctor.getPassword(), LocalDateTime.now());
+            Doctor updatedDoctor = new Doctor(doctor.getId(), doctor.getName(), doctor.getSpeciality(),doctor.getPassword(), LocalDateTime.now());
             doctorStack.push(updatedDoctor);
-            doctorStack.saveLastLogin();
+            doctorStack.saveLastLogin(); 
 
             currentLoggedInDoctor = updatedDoctor;
 
             ConsoleUtil.clearScreen();
-            System.out.println(Constants.GREEN + "\nDoctor logged in successfully\n" + Constants.RESET);
-            System.out.println("Doctor ID   : " + updatedDoctor.getId());
-            System.out.println("Doctor Name : " + updatedDoctor.getName());
-            System.out.println("Speciality  : " + updatedDoctor.getSpeciality());
+            System.out.println(Constants.GREEN+"\nDoctor logged in successfully\n"+Constants.RESET);
+            System.out.println("Doctor ID   : "+updatedDoctor.getId());
+            System.out.println("Doctor Name : "+updatedDoctor.getName());
+            System.out.println("Speciality  : "+updatedDoctor.getSpeciality());
             return true;
         } else {
-            System.out.println(Constants.RED + "\nLogin failed : Invalid name or password" + Constants.RESET);
+            System.out.println(Constants.RED+"\nLogin failed : Invalid name or password"+Constants.RESET);
             return false;
         }
     }
@@ -161,16 +155,14 @@ public class DoctorManagement {
     public static boolean doctorLogout(Stack doctorStack) {
         String docName = currentLoggedInDoctor.getName();
         if (docName == null || docName.trim().isEmpty() || !docName.matches("[a-zA-Z\\.\\s\\-']+")) {
-            System.out.println(
-                    Constants.RED + "Invalid name. Name must contain only letters and spaces" + Constants.RESET);
+            System.out.println(Constants.RED + "Invalid name. Name must contain only letters and spaces" + Constants.RESET);
             return false;
         }
         String doctorId = currentLoggedInDoctor.getId();
 
-        Doctor loggedOut = doctorStack.outDoctor(doctorId, docName);
+        Doctor loggedOut = doctorStack.outDoctor(doctorId,docName);
         if (loggedOut == null) {
-            System.out.println(Constants.RED + "Doctor with ID " + doctorId + " and name " + docName
-                    + " not found or not logged in" + Constants.RESET);
+            System.out.println(Constants.RED + "Doctor with ID " + doctorId + " and name " + docName + " not found or not logged in" + Constants.RESET);
             return false;
         }
 
@@ -179,8 +171,8 @@ public class DoctorManagement {
         ConsoleUtil.clearScreen();
         System.out.println(Constants.GREEN + "Successfully logout\n" + Constants.RESET);
         System.out.println("Name         : " + loggedOut.getName() + " (ID : " + loggedOut.getId() + ")\n" +
-                "Speciality   : " + loggedOut.getSpeciality() + "\n" +
-                "Log Out Time : " + currentDate.format(time));
+                           "Speciality   : " + loggedOut.getSpeciality() + "\n" +
+                           "Log Out Time : " + currentDate.format(time));
         currentLoggedInDoctor = null;
         return true;
     }

@@ -29,8 +29,7 @@ public class BST {
 
     public void insertPatient(Patient patient) {
         if (patient == null || !isValidPatientId(patient.getId())) {
-            System.out.println(Constants.RED + "Invalid patient ID: " + (patient == null ? "null" : patient.getId())
-                    + Constants.RESET);
+            System.out.println(Constants.RED + "Invalid patient ID: " + (patient == null ? "null" : patient.getId()) + Constants.RESET);
             return;
         }
         root = insert(root, patient);
@@ -62,8 +61,7 @@ public class BST {
         } else if (newNum > currentNum) {
             node.right = insert(node.right, patient);
         } else {
-            System.out.println(Constants.RED + "Duplicate patient ID: " + patient.getId()
-                    + ". Updating existing patient." + Constants.RESET);
+            System.out.println(Constants.RED + "Duplicate patient ID: " + patient.getId() + ". Updating existing patient." + Constants.RESET);
             node.data = patient;
             return node;
         }
@@ -72,24 +70,20 @@ public class BST {
         int balance = getBalance(node);
 
         // Left Left
-        if (balance > 1 && Integer.parseInt(patient.getId().substring(1)) < Integer
-                .parseInt(node.left.data.getId().substring(1))) {
+        if (balance > 1 && Integer.parseInt(patient.getId().substring(1)) < Integer.parseInt(node.left.data.getId().substring(1))) {
             return rightRotate(node);
         }
         // Right Right
-        if (balance < -1 && Integer.parseInt(patient.getId().substring(1)) > Integer
-                .parseInt(node.right.data.getId().substring(1))) {
+        if (balance < -1 && Integer.parseInt(patient.getId().substring(1)) > Integer.parseInt(node.right.data.getId().substring(1))) {
             return leftRotate(node);
         }
         // Left Right
-        if (balance > 1 && Integer.parseInt(patient.getId().substring(1)) > Integer
-                .parseInt(node.left.data.getId().substring(1))) {
+        if (balance > 1 && Integer.parseInt(patient.getId().substring(1)) > Integer.parseInt(node.left.data.getId().substring(1))) {
             node.left = leftRotate(node.left);
             return rightRotate(node);
         }
         // Right Left
-        if (balance < -1 && Integer.parseInt(patient.getId().substring(1)) < Integer
-                .parseInt(node.right.data.getId().substring(1))) {
+        if (balance < -1 && Integer.parseInt(patient.getId().substring(1)) < Integer.parseInt(node.right.data.getId().substring(1))) {
             node.right = rightRotate(node.right);
             return leftRotate(node);
         }
@@ -207,11 +201,9 @@ public class BST {
     private void printTableHeader(String traversalType) {
         System.out.println("____________________________________________________________________________");
         System.out.println("|                         PATIENTS INFORMATION                              |");
-        System.out.println("|                          (BST " + traversalType.toUpperCase()
-                + ")                                    |");
+        System.out.println(  "|                          (BST " + traversalType.toUpperCase() + ")                                    |");
         System.out.println("============================================================================|");
-        System.out.printf("| %-3s | %-5s | %-12s | %-3s | %-15s | %-20s |\n", "No", "ID", "Name", "Age", "Phone Number",
-                "Address");
+        System.out.printf("| %-3s | %-5s | %-12s | %-3s | %-15s | %-20s |\n", "No", "ID", "Name", "Age", "Phone Number", "Address");
         System.out.println("|---------------------------------------------------------------------------|");
     }
 
@@ -245,7 +237,7 @@ public class BST {
         printTableHeader("Preorder");
         int counter = 1;
         counter = preOrder(root, counter);
-        System.out.println("=============================================================================");
+       System.out.println("=============================================================================");
     }
 
     private int preOrder(AVLNode root, int counter) {
@@ -267,7 +259,7 @@ public class BST {
         printTableHeader("Postorder");
         int counter = 1;
         counter = postOrder(root, counter);
-        System.out.println("=============================================================================");
+       System.out.println("=============================================================================");
     }
 
     private int postOrder(AVLNode root, int counter) {
@@ -317,11 +309,10 @@ public class BST {
                     if (p != null && isValidPatientId(p.getId())) {
                         tempTree.insertPatient(p);
                     } else {
-                        System.out.println(Constants.RED + "Skipping invalid patient data: "
-                                + (p == null ? "null" : p.getId()) + Constants.RESET);
+                        System.out.println(Constants.RED + "Skipping invalid patient data: " + (p == null ? "null" : p.getId()) + Constants.RESET);
                     }
                 }
-                root = tempTree.root;
+                root = tempTree.root; 
                 System.out.println("Patient data loaded successfully from " + filename);
             } else {
                 System.out.println("No patient data found in " + filename);

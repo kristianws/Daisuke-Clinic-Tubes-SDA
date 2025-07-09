@@ -14,5 +14,3 @@ D13|Dr. Dimas Nugroho|Endocrinologist|dimasEndo!|13-03-2025 17:30:00|registered
 D14|Dr. Dewi Kartikasari|Hematologist|dewiBlood789|25-04-2025 08:55:00|registered
 D15|Dr. Kevin Aditya|Urologist|kevinUro123|10-10-2024 09:40:00|registered
 D16|Dr. Saskya|Cardiologist|passSaskya123|16-06-2025 23:27:59|registered
-D17|akbar|cardiologist|akbar123|18-06-2025 00:00:16|registered
-D18|sayas|neurologist|sayas123|18-06-2025 03:47:09|registered

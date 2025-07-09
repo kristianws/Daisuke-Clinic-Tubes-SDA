@@ -13,24 +13,6 @@
           "treatment": "mbuh",
           "roomNumber": "",
           "complaint": "Sakit aja"
-        },
-        "next": {
-          "data": {
-            "diagnosis": "penyakit jatung",
-            "medication": "olah raga teratur dan meminum suplemen",
-            "treatment": "terapi dipagi hari",
-            "roomNumber": "2",
-            "complaint": "gtw"
-          },
-          "next": {
-            "data": {
-              "diagnosis": "serangan jantung",
-              "medication": "olahraga teratur ",
-              "treatment": "tearpi",
-              "roomNumber": "A101",
-              "complaint": "sakit jantung"
-            }
-          }
         }
       }
     }

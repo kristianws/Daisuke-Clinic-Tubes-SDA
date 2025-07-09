@@ -168,7 +168,7 @@ public class Main {
     }
 
     static void loadData(LinkedList patientList, AdminList adm, Stack doctorStack, Queue appointmentQueue,
-        BST patientBST, ScheduleList schedule) {
+            BST patientBST, ScheduleList schedule) {
         patientList.load("data/patient.json");
         doctorStack.load("data/doctor.txt");
         // adm.load("data/admin.txt");
@@ -182,8 +182,8 @@ public class Main {
     }
 
     static void roleUser(Scanner sc, AdminList adm, AdminRecord adminRole,
-        PatientManagement patientManage, Stack doctorRole,
-        DoctorManagement doctorManage) {
+            PatientManagement patientManage, Stack doctorRole,
+            DoctorManagement doctorManage) {
         int opsi;
         System.out.println(Constants.BLUE);
         FileHandler.readFile("display/loginregister.txt");
@@ -236,13 +236,15 @@ public class Main {
                         inputPassword = sc.nextLine();
 
                         if (inputName.trim().isEmpty() || inputPassword.trim().isEmpty()) {
-                            System.out.println(Constants.RED + "Error: Username or Password cannot be empty" + Constants.RESET);
-                            continue; 
+                            System.out.println(
+                                    Constants.RED + "Error: Username or Password cannot be empty" + Constants.RESET);
+                            continue;
                         }
                         loginSuccess = doctorManage.doctorLogin(sc, doctorRole, inputId, inputName, inputPassword);
 
                         if (!loginSuccess) {
-                            //System.out.println(Constants.RED + "Login failed. Please try again." + Constants.RESET);
+                            // System.out.println(Constants.RED + "Login failed. Please try again." +
+                            // Constants.RESET);
                         }
                         ConsoleUtil.waitForEnter(sc);
                         ConsoleUtil.clearScreen();
@@ -271,7 +273,9 @@ public class Main {
                     ConsoleUtil.waitForEnter(sc);
                     ConsoleUtil.clearScreen();
             }
-
+        } else if (opsi == 2) {
+            System.out.print(Constants.CYAN);
+            FileHandler.readFile("display/user.txt");
             System.out.print(Constants.RESET + "Choose option user : ");
             int opsi2 = sc.nextInt();
             sc.nextLine();

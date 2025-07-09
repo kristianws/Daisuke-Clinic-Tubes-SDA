@@ -1,5 +1,1 @@
 ADM1|Admin-1|passAdmin1|17-06-2025 00:47
-ADM1|Admin-1|passAdmin1|17-06-2025 23:22
-ADM7|sayas|passAdmin7|17-06-2025 23:38
-ADM7|sayas|passAdmin7|17-06-2025 23:55
-ADM7|sayas|passAdmin7|18-06-2025 03:30
